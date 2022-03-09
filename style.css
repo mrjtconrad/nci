@@ -1,16 +1,19 @@
 body {
-  background-color: black;
+  background-color: goldenrod;
   text-align: center;
   color:white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .show{
   background-color:white;
-  color:black;
+  color:powderblue;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .row{
   margin-top: 100px;
   min-height: 100px;
   justify-content:space-between;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
