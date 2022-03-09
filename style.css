@@ -9,3 +9,9 @@ body {
   color:black;
   text-align: center;
 }
+
+.row{
+  margin-top: 100px;
+  min-height: 100px;
+  justify-content: space-between;
+}
