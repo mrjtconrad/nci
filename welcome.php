@@ -1,7 +1,8 @@
 <html>
 <body>
 
-<?php echo $_POST["name"]; ?><br> , thank you for your details. We will be in touch via <?php echo $_POST["email"];.>
-
+Welcome <?php echo $_GET["name"]; ?><br>
+Your email address is: <?php echo $_GET["email"]; ?>
+  
 </body>
 </html>
