@@ -4,13 +4,13 @@ body {
   color:white;
 }
 
-.show{
+.show {
   background-color:white;
   color:black;
   text-align: center;
 }
 
-.row{
+.row {
   margin-top: 100px;
   min-height: 100px;
   justify-content: space-between;
