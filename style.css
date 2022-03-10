@@ -7,8 +7,10 @@ body {
 
 .show{
   background-color:white;
-  color:powderblue;
+  color:navy;
   font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center ;
+
 }
 
 .row{
@@ -16,4 +18,5 @@ body {
   min-height: 100px;
   justify-content:space-between;
   font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center ;
 }
