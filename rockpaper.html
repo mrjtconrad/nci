@@ -11,44 +11,68 @@
 	<title>Rock Paper Scissor</title>
 </head>
 <body>
-	<section class="game">
-		<!--Title -->
-		<div class="title">Rock Paper Scissor</div>
-		
-		<!--Display Score of player and computer -->
-		<div class="score">
-			<div class="playerScore">
-				<h2>Player</h2>
-				<p class="p-count count">0</p>
 
-			</div>	
-			<div class="computerScore">
-				<h2>Computer</h2>
-				<p class="c-count count">0</p>
+	<script>
+	import java.util.Scanner;
 
-			</div>
-		</div>
-	
-		<div class="move">Choose your move</div>
-		
-		<!--Number of moves left before game ends -->
-		<div class="movesleft">Moves Left: 10 </div>
-		
-		<!--Options available to player to play game -->
-		<div class="options">
-			<button class="rock">Rock</button>
-			<button class="paper">Paper</button>
-			<button class="scissor">Scissors</button>
-		</div>
-		
-		<!--Final result of game -->
-		<div class="result"></div>
-		
-		<!--Reload the game -->
-		<button class="reload"></button>
+class Main {
+  public static void main(String[] args) {
+    
+		//Initialize the Scanner and print a welcome message
+		Scanner in = new Scanner(System.in);		System.out.println("Welcome to Rock, Paper, Scissors!");
 
-	</section>
+		//Use a while(true) loop and only break the loop if the user wants to quit
+		while(true) {
+		
+			//Get the user's move through user input
+			System.out.print("What is your move? To make a move, enter rock, paper, or scissors. To quit the game, enter quit. ");
+			String myMove = in.nextLine();
+			
+			//Check if the user wants to quit the game
+			if(myMove.equals("quit")) {
+				break;
+			}
 
-	<script src="app.js"></script>
+			//Check if the user's move is valid (rock, paper, or scissors)
+			if(!myMove.equals("rock") && !myMove.equals("paper") && !myMove.equals("scissors")) {
+
+				System.out.println("Your move isn't valid!");
+			
+			} else {
+
+				//Get a random number in between 0 and 3 and convert it to an integer so that the possibilities are 0, 1, or 2
+				int rand = (int)(Math.random()*3);
+				
+				//Convert the random number to a string using conditionals and print the opponent's move
+				String opponentMove = "";
+				if(rand == 0) {
+					opponentMove = "rock";
+				} else if(rand == 1) {
+					opponentMove = "paper";
+				} else {
+					opponentMove = "scissors";
+				}
+				System.out.println("Opponent move: " + opponentMove);
+					
+				//Print the results of the game: tie, lose, win
+				if(myMove.equals(opponentMove)) {
+					System.out.println("It's a tie!");
+				} else if((myMove.equals("rock") && opponentMove.equals("scissors")) || (myMove.equals("scissors") && opponentMove.equals("paper")) || (myMove.equals("paper") && opponentMove.equals("rock"))) {
+					System.out.println("You won!");
+				} else {
+					System.out.println("You lost!");
+				}
+
+			}
+
+		}
+
+		//Print a final message for the user
+		System.out.println("Thanks for playing Rock, Paper, Scissors!");
+
+  }
+}
+		</script>
+
 </body>
 </html>
