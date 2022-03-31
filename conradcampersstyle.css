@@ -1,0 +1,22 @@
+body {
+  background-color: black;
+  text-align: center;
+  color:white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.show{
+  background-color:black;
+  color:navy;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center ;
+
+}
+
+.row{
+  margin-top: 100px;
+  min-height: 100px;
+  justify-content:space-between;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center ;
+}
